@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuboni Web-Designs</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    
+    <!-- <a href="https://www.vecteezy.com/free-videos/abstract-lines">Abstract Lines Stock Videos by Vecteezy</a> -->
+
+    <style>
+        .landing-page-container {
+            height: 100dvh;
+            width: 100dvw;
+        }
+        h1 {
+            display: inline-block
+        }
+        button {
+            position: relative;
+            top: -7%;
+            left: 2%
+        }
+        .about-banner {
+        display: flex;
+        width: 100%;
+        min-height: 7vh;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        background: black;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        pad:0px;
+        }
+        .projects-grid {
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 40vh 40vh;
+        width: 100%;
+        min-height: 93vh;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        pad:0px;
+        }
+        .about {
+            color: white;
+            font-weight: 250;
+            font-style: light;
+            display: inline-block;
+            animation: scroll 15s linear infinite;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-50%); /* Move half the width of the duplicated content */
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <section class="landing-page-container">
+        <div class="landing-grid">
+    <!-- Banner -->
+        <div class="home-container">
+            <!-- Slider -->
+            <div class="main-me">
+                <img src="./assets/main-pic.png" alt="Sipumzo">
+            </div>
+            <div class="home-pic-container" style="--quantity: 8">
+                <!-- Items -->
+                <div class="home-pics" style="--position:1">
+                    <img src="./assets/Naledis_2018.jpg" alt="Naledi Awards 2018" class="pic1">
+                </div>
+                <div class="home-pics" style="--position:2">
+                    <img src="./assets/langharm_cast.jpg" alt="Naledi Awards 2018" class="pic2">
+                </div>
+                <div class="home-pics" style="--position:3">
+                    <img src="./assets/me-mama.jpg" alt="Naledi Awards 2018" class="pic3">
+                </div>
+                <div class="home-pics" style="--position:4">
+                    <img src="./assets/sibling3.jpg" alt="Naledi Awards 2018" class="pic4">
+                </div>
+                <div class="home-pics" style="--position:5">
+                    <img src="./assets/bass_with_shawn.jpg" alt="Naledi Awards 2018" class="pic5">
+                </div>
+                <div class="home-pics" style="--position:6">
+                    <img src="./assets/charl.jpg" alt="Naledi Awards 2018" class="pic6">
+                </div>
+                <div class="home-pics" style="--position:7">
+                    <img src="./assets/best_man_speech.jpg" alt="Naledi Awards 2018" class="pic7">
+                </div>
+                <div class="home-pics" style="--position:8">
+                    <img src="./assets/dad3.jpg" alt="Naledi Awards 2018" class="pic8">
+                </div>
+            </div> 
+            
+            <!-- <div class="author">
+                <h2>Musician & Web Developer</h2>
+            </div> -->
+        </div>
+    </section>
+    
+        <div class="masked-landing"></div>
+        <div class="content">
+            <h1 class="name">Sipumzo <span class="mid-name">Trueman</span> Lucwaba</h1>
+        </div>
+    </div>
+    
+    <!-- <header>
+        <h1>Kuboni Web-Designs</h1>
+        <button><a href="./public/gallery.html">Gallery</a></button>
+        <button><a href="contact">Contact</a></button>
+        <button><a href="./public/about_me.html">About Me</a></button>
+        <button><a href="./public/my_work.html">My Work</a></button>
+    </header> -->
+
+    <div class="about-banner">
+    <section class="about">
+        <h2>COMPOSITION ** ORCHESTTRATION ** MUSICAL DIRECTION ** COMPOSITION ** ORCHESTTRATION ** MUSICAL DIRECTION ** COMPOSITION ** ORCHESTTRATION ** MUSICAL DIRECTION **  </h2>
+    </section>
+    <section class="about">
+        <h2>COMPOSITION ** ORCHESTTRATION ** MUSICAL DIRECTION ** COMPOSITION ** ORCHESTTRATION ** MUSICAL DIRECTION ** COMPOSITION ** ORCHESTTRATION ** MUSICAL DIRECTION **  </h2>
+    </section>
+    </div>
+
+    <section class="projects-grid">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="#">Project 1</a> - A brief description of project 1.</li>
+            <li><a href="#">Project 2</a> - A brief description of project 2.</li>
+            <li><a href="#">Project 3</a> - A brief description of project 3.</li>
+        </ul>
+    </section>
+    <!-- <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at <a href="mailto:callmekuboni@gmail.com">   
+    <script src="main.js"></script> -->
+</body>
+</html>
