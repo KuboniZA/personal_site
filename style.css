@@ -488,7 +488,7 @@ left: 1%;
     width: 100%;
     display: grid;
     grid-template-colums: repeat(4, minmac(100px, 1fr));
-    gap: clamp(2rem, 7vw, 12rem);
+    gap: clamp(2rem, 5vw, 12rem);
     /* border: 1px solid green; */
     align-items: center;
 }
@@ -514,10 +514,14 @@ left: 1%;
     -webkit-transform: rotate(180deg);
 }
 
-/* .md-slides:hover {
+.md-slide1:hover {
     cursor: pointer;
     transform: scale(1.02);
-} */
+}
+.md-slide1:hover + .md-slide1a {
+    transform: scale(1.02) translateY(2%);
+}
+
 /* @keyframes mdCarousal {
     0% {
         transform: perspective(1000px) rotateY(0deg);
