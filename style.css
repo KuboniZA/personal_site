@@ -641,3 +641,6 @@ left: 1%;
 .dev-skill4 {
     grid-row: 4;
 }
+.nb-tools {
+    font-weight: 400;
+}
