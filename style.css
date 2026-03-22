@@ -501,19 +501,53 @@ left: 1%;
     grid-row: 3;
     overflow: hidden;
 }
+.main-containers, .main-skills-containers {
+    margin: clamp(10px, 1.5dvw, 40px);
+}
 .md-carousal {
     position: absolute;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, auto); 
+    display: flex;
+    /* grid-template-columns: repeat(4, auto);  */
     gap: clamp(1rem, 3vw, 6rem);
     align-items: center;
     overflow-x: auto; /* NB: makes images scrollable */ 
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
+    
 }
+
+.md-carousal .md-slide-containers {
+    scroll-snap-align: center; /* align images to the center when scrolling. Made mandatory by scroll-snap-type:
+                                mandatory. in .md-carousal. */
+    animation: scrollImages 5s linear infinite;
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Move half the width of the duplicated content */
+    }
+}
+
+.md-carousal .md-slide-containersB {
+    scroll-snap-align: center; /* align images to the center when scrolling. Made mandatory by scroll-snap-type:
+                                mandatory. in .md-carousal. */
+    animation: scrollImagesBottomLeft 5s linear infinite;
+}
+
+@keyframes scrollImagesBottomLeft {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%); /* Move half the width of the duplicated content */
+    }
+}
+
 .md-carousal::-webkit-scrollbar {
     display: none; /* Remove scrollbar at the bottom */
 }
@@ -523,8 +557,6 @@ left: 1%;
     position: relative;
     margin-bottom: clamp(0.25rem, 1rem, 2rem);
     transition: transform 0.2s ease-in;
-    scroll-snap-align: center; /* align images to the center when scrolling. Made mandatory by scroll-snap-type:
-                                mandatory. in .md-carousal. */
     
     /* object-fit: contain; */
     /* border: 1px solid pink; */
@@ -532,20 +564,6 @@ left: 1%;
 .md-slides:hover {
     cursor: pointer;
     transform: scale(1.05);
-}
-
-.md-slide1-container {
-    grid-column: 1;
-    
-}
-.md-slide2-container {
-    grid-column: 2;
-}
-.md-slide3-container {
-    grid-column: 3;
-}
-.md-slide4-container {
-    grid-column: 4;
 }
 
 .md-imgs {
@@ -575,20 +593,6 @@ left: 1%;
     inset: 0;
     z-index: -1;
     align-self: center;
-}
-
-.md-slide1::after {
-    grid-column: 1;
-    
-}
-.md-slide2::after {
-    grid-column: 2;
-}
-.md-slide3::after {
-    grid-column: 3;
-}
-.md-slide4::after {
-    grid-column: 4;
 }
 
 .main-md-text-container {
