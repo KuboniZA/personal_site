@@ -13,7 +13,7 @@
             // }
         });
     }, {
-        threshold: [0, 0.99]  // 100% visibility required
+        threshold: [0, 0.99] 
     });
 
     images.forEach(img => observer.observe(img));

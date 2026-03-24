@@ -270,9 +270,9 @@ left: 1%;
     font-weight: 250;
     font-style: light;
     display: inline-block;
-    animation: scrollTop 600s linear infinite;
+    animation: scrollWorkTop 600s linear infinite;
 }
-@keyframes scrollTop {
+@keyframes scrollWorkTop {
     0% {
         transform: translateX(0%);
     }
@@ -305,7 +305,7 @@ left: 1%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 7dvh 1fr 1fr 7dvh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .main-skills-containers {
@@ -563,8 +563,64 @@ left: 1%;
     grid-row: 4;
 }
 
+/* ************************SECTION 3 *************************** */
 
-/* *************************************************** MEDIA QUEIRES ************************************************* */
+.section3-grid {
+    position: absolute;
+    top: 200%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7% aut auto 7%;
+    /* overflow: hidden; */
+}
+
+.top-banner2 {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+.bottom-banner2 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.about-containers {
+    overflow: hidden;
+}
+.about-container1 {
+    grid-row: 2;
+    grid-column: 1;
+}
+.about-container2 {
+    grid-row: 2;
+    grid-column: 2;
+}
+.about-container3 {
+    grid-row: 3;
+    grid-column: 1;
+}
+.about-container4 {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+.about-imgs {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+}
+.about-img1 {
+    transform: translateY(-3%)
+}
+
+/* *************************************************** MY WORK ************************************************* */
+
+
+
+
 
 /* ****************** 900px - 1024px ******************* */
 
