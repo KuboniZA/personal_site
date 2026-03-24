@@ -232,19 +232,7 @@ left: 1%;
         }
     }
 
-/* ********************** SECTION 2: SKILLS OVERVIEW ************************ */
-
-.section2-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 7dvh 1fr 1fr 7dvh;
-    overflow: hidden;
-}
-
-.skills-top-banner {
+    .skills-top-banner {
     display: flex;
     width: 100%;
     min-height: 7dvh;
@@ -282,14 +270,14 @@ left: 1%;
     font-weight: 250;
     font-style: light;
     display: inline-block;
-    animation: scrollTop 15s linear infinite;
+    animation: scrollTop 600s linear infinite;
 }
 @keyframes scrollTop {
     0% {
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-50%); /* Move half the width of the duplicated content */
+        transform: translateX(-2000%); /* Move half the width of the duplicated content */
     }
 }
 .skills-bottom {
@@ -297,15 +285,27 @@ left: 1%;
     font-weight: 250;
     font-style: light;
     display: inline-block;
-    animation: scrollBottom 15s linear infinite;
+    animation: scrollBottom 600s linear infinite;
 }
 @keyframes scrollBottom {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-2000%);
     }
     100% {
         transform: translateX(0%); /* Move half the width of the duplicated content */
     }
+}
+
+/* ********************** SECTION 2: SKILLS OVERVIEW ************************ */
+
+.section2-grid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 7dvh 1fr 1fr 7dvh;
+    overflow: hidden;
 }
 
 .main-skills-containers {
@@ -362,7 +362,7 @@ left: 1%;
         color: black;
     }
     10% {
-        color: red;
+        color: blue;
         font-weight: 700;
     }
     100% {
@@ -405,12 +405,14 @@ left: 1%;
     
 }
 
-.md-carousal .md-slide-containers {
-    animation: scrollImages 40s linear infinite;
+.md-carousal .md-slide-containers { /* NOTE THAT THIS REFERS TO THE SLIDE CONTAINERS
+                                        AND NOT THE SLIDES THEMSELVES */
+    animation: scrollImages 600s linear infinite;
 }
 
-.md-carousal .md-slide-containersB {
-    animation: scrollBackImages 40s linear infinite;
+.md-carousal .md-slide-containersB { /* NOTE THAT THIS REFERS TO THE SLIDE CONTAINERS
+                                        AND NOT THE SLIDES THEMSELVES */
+    animation: scrollBackImages 600s linear infinite;
 }
 
 @keyframes scrollImages {
@@ -418,15 +420,15 @@ left: 1%;
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-600%); /* Move half the width of the duplicated content */
+        transform: translateX(-8000%);
     }
 }
 @keyframes scrollBackImages {
     0% {
-        transform: translateX(-700%);
+        transform: translateX(-8000%);
     }
     100% {
-        transform: translateX(-100%); /* Move half the width of the duplicated content */
+        transform: translateX(-100%);
     }
 }
 

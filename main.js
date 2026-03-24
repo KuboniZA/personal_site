@@ -7,10 +7,10 @@
                 // Fully visible → start animation
                 entry.target.style.transform = "rotateY(180deg)";
                 
-            } else {
+            } // else {
                 // Not fully visible → pause
                 // entry.target.style.transform = "rotateY(360deg)";
-            }
+            // }
         });
     }, {
         threshold: [0, 0.99]  // 100% visibility required
