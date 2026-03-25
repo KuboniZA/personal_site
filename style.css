@@ -10,7 +10,9 @@ body {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
-
+.site-container::-webkit-scrollbar {
+    display: none;
+}
 /* 
 .container-parent {
     background-color: green;
@@ -573,6 +575,7 @@ left: 1%;
     grid-template-rows: 7% auto auto 7%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    margin: 0;
 }
 
 .top-banner2 {
@@ -620,14 +623,15 @@ left: 1%;
 
 .my-work-grid {
     position: relative;
-    top: 300%;
+    top: 0%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     display: grid;
     grid-template-rows: 7% auto 7%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    margin: 0;
     }
 .my-work-top {
     grid-row: 1;
@@ -655,9 +659,7 @@ left: 1%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
 }
-.projects-grid::-webkit-scrollbar {
-    display: none;
-}
+
 
 .work-top {
     color: white;
