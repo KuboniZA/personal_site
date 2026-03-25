@@ -3,9 +3,14 @@ body {
     margin: 0px;
     font-family: "Stack Sans Notch", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 18;
     font-style: normal;
 }
+.site-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
 /* 
 .container-parent {
     background-color: green;
@@ -38,201 +43,203 @@ left: 1%;
 /* ****************************** Landing page CSS ******************************* */
 .landing-page-container {
     overflow: hidden;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
-  .landing-grid {
-        display: grid;
-        grid-template-rows: 1fr;
-        width: 100%;
-        min-height: 100vh;
-        top: 0px;
-        left: 0px;
-        margin: 0px;
-        pad:0px;
-    }
-    /* .masked-landing {
-        height: 100dvh;
-        width: 100%;
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        display: flex;
-        left: 0px;
-        top: 0px;
-        justify-content: center;
-        background-size: cover;
-        background: black;
-        mask-image: url(./assets/TransitionVector-ezgif.com-gif-to-webp-converter.webp);
-        mask-size: cover;
-        transform: rotate(180deg);
-        z-index: 5;
-        position: absolute;
-    } */
-    .home-container {
-        text-align: center;
-        overflow: hidden;
-        position: relative;
-        grid-row: 1 /2;
-        grid-column: 1/2;
-        width: 100dvw;
-        height: 100dvh;
-    }
-    .landing-page-container .scroll-container {
-        position: relative;
-        width: fit-content;
-        height: 1rem;
-        font-size: 0.75rem;
-        padding: 20px;
-        background-color: red;
-        color: black;
-        background: linear-gradient(to right, lightgreen, green);
-        display: flex;
-        align-items: center;
-        border-radius: 1000px;
-        bottom: 8dvh;
-        justify-self: center;
-        white-space: nowrap;
-    }
-    .scroll-container::after, .scroll-container::before {
-        content: "";
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        inset: 0;
-        background-color: transparent;
-        background: conic-gradient(white, lightgrey, grey, darkgrey, white);
-        z-index: -1;
-        border-radius: inherit;
-        transform: scaleX(1.05) scaleY(1.1);
-    }
-    .scroll-container::before {
-        filter: blur(1rem);
-        animation: 3.5s glow ease-in-out infinite;
-        
-    }
-    @keyframes glow {
-        0% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.1;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    .landing-page-container .scroll-container .down-arrow {
-        margin-left: 10px;
-        font-size: 1rem;
-        animation: 3.5s glow ease-in-out infinite;
-    }
-    .scroll-text {
-        animation: 3.5s glow ease-in-out infinite;
-    }
-
-    .home-pic-container {
-        position: absolute;
-        height: 80%;
-        width: 80%;
-        top: -15%;
-        left: 10%;
-        transform-style: preserve-3d;
-        transform: perspective(1000px);
-        animation: runCarousel 30s linear infinite;
-    }
-     @keyframes runCarousel {
-        0% {
-            transform: perspective(1000px) rotateX(-20deg) rotateY(0deg);
-        }
-          
-        100% {
-            transform: perspective(1000px) rotateX(-20deg) rotateY(360deg);
-        }       
-    }
-    .home-pics {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: 
-            rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) *1deg))
-            translateZ(550px);
-        
-    }
-    .home-pics img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transform: scale(0.2);
-    }
-
-    .home-container .home-pic-container .home-pics img {
-        /* object-fit: cover; */
-        box-shadow: 0px 0px 10px black;
-        opacity: 0.85;
-    }
-    .home-container .main-me {
-        position: relative;
-        top: 20dvh;
-        justify-self: center;
-        z-index: -5;
-    }
-    .home-container .main-me img {
-        position: relative;
-        max-height: 80vh;
-        max-width: 750px;
-        bottom: 0px;
-    }
+.landing-grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+    min-height: 100vh;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding:0px;
+}
+/* .masked-landing {
+    height: 100dvh;
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    display: flex;
+    left: 0px;
+    top: 0px;
+    justify-content: center;
+    background-size: cover;
+    background: black;
+    mask-image: url(./assets/TransitionVector-ezgif.com-gif-to-webp-converter.webp);
+    mask-size: cover;
+    transform: rotate(180deg);
+    z-index: 5;
+    position: absolute;
+} */
+.home-container {
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    grid-row: 1 /2;
+    grid-column: 1/2;
+    width: 100dvw;
+    height: 100dvh;
+}
+.landing-page-container .scroll-container {
+    position: relative;
+    width: fit-content;
+    height: 1rem;
+    font-size: 0.75rem;
+    padding: 20px;
+    background-color: red;
+    color: black;
+    background: linear-gradient(to right, lightgreen, green);
+    display: flex;
+    align-items: center;
+    border-radius: 1000px;
+    bottom: 8dvh;
+    justify-self: center;
+    white-space: nowrap;
+}
+.scroll-container::after, .scroll-container::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    background: conic-gradient(white, lightgrey, grey, darkgrey, white);
+    z-index: -1;
+    border-radius: inherit;
+    transform: scaleX(1.05) scaleY(1.1);
+}
+.scroll-container::before {
+    filter: blur(1rem);
+    animation: 3.5s glow ease-in-out infinite;
     
-    .content {
-        position: absolute;
-        bottom: -8%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100vw;
-        height: fit-content;
-        padding-bottom: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        grid-row: 1 / 2;
-        grid-column: 1 / 2;
-        z-index: 7;
-        overflow: hidden;
-        
+}
+@keyframes glow {
+    0% {
+        opacity: 1;
     }
-    .content h1 {
-        font-family: "Stack Sans Notch", sans-serif;
-        font-size: 6rem;
-        list-style: 1em;
-        color: black;
-        text-align: center;
-        
-        font-weight: 650;
-        font-style: normal;
-        text-shadow: 1px 1px white;
+    50% {
+        opacity: 0.1;
     }
+    100% {
+        opacity: 1;
+    }
+}
+
+.landing-page-container .scroll-container .down-arrow {
+    margin-left: 10px;
+    font-size: 1rem;
+    animation: 3.5s glow ease-in-out infinite;
+}
+.scroll-text {
+    animation: 3.5s glow ease-in-out infinite;
+}
+
+.home-pic-container {
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    top: -15%;
+    left: 10%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: runCarousel 30s linear infinite;
+}
+    @keyframes runCarousel {
+    0% {
+        transform: perspective(1000px) rotateX(-20deg) rotateY(0deg);
+    }
+        
+    100% {
+        transform: perspective(1000px) rotateX(-20deg) rotateY(360deg);
+    }       
+}
+.home-pics {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) *1deg))
+        translateZ(550px);
     
-    .name {
+}
+.home-pics img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.2);
+}
+
+.home-container .home-pic-container .home-pics img {
+    /* object-fit: cover; */
+    box-shadow: 0px 0px 10px black;
+    opacity: 0.85;
+}
+.home-container .main-me {
+    position: relative;
+    top: 20dvh;
+    justify-self: center;
+    z-index: -5;
+}
+.home-container .main-me img {
+    position: relative;
+    max-height: 80vh;
+    max-width: 750px;
+    bottom: 0px;
+}
+
+.content {
+    position: absolute;
+    bottom: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: fit-content;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    z-index: 7;
+    overflow: hidden;
+    
+}
+.content h1 {
+    font-family: "Stack Sans Notch", sans-serif;
+    font-size: 6rem;
+    color: black;
+    text-align: center;
+    
+    font-weight: 650;
+    font-style: normal;
+    text-shadow: 1px 1px white;
+}
+
+.name {
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     animation: clip-text 4s ease-out forwards;
-    }
+}
 
-    .mid-name {
-        color: green;
-    }
-    .home-container .main-me {
-        filter: drop-shadow(2px 2px 5px black); 
-    }
+.mid-name {
+    color: green;
+}
+.home-container .main-me {
+    filter: drop-shadow(2px 2px 5px black); 
+}
 
-    @keyframes clip-text {
-        to {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
-        }
+@keyframes clip-text {
+    to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
     }
+}
 
-    .skills-top-banner {
+.skills-top-banner {
     display: flex;
     width: 100%;
     min-height: 7dvh;
@@ -243,7 +250,7 @@ left: 1%;
     top: 0px;
     left: 0px;
     margin: 0px;
-    pad:0px;
+    padding:0px;
     grid-column: 1 / span 2;
     grid-row: 1;
 }
@@ -299,13 +306,15 @@ left: 1%;
 /* ********************** SECTION 2: SKILLS OVERVIEW ************************ */
 
 .section2-grid {
-    position: absolute;
+    position: relative;
+    top: 0%;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 7dvh 1fr 1fr 7dvh;
-    /* overflow: hidden; */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .main-skills-containers {
@@ -411,7 +420,7 @@ left: 1%;
 .md-carousal .md-slide-containersB { /* NOTE THAT THIS REFERS TO THE SLIDE CONTAINERS
                                         AND NOT THE SLIDES THEMSELVES */
     animation: scrollBackImages 600s linear infinite;
-    animation delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 @keyframes scrollImages {
@@ -451,20 +460,10 @@ left: 1%;
     position: absolute;
     inset: 0;
     transition: transform 0.75s ease-in;
-    transforme-style: preserve3d;
+    transform-style: preserve-3d;
     /* transform: rotateY(180deg); */
     /* backface-visibility: hidden;
     -webkit-backface-visibility: hidden; */
-}
-
-.md-slides:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    
-}
-
-.md-carousal:hover .md-slide-containers, .md-carousal:hover .md-slide-containersB { /* Pause animation and flip card on hover */
-    /* animation-play-state: paused; */
 }
 
 .md-imgs {
@@ -512,7 +511,7 @@ left: 1%;
 }
 .skill-title {
     font-size: clamp(5px, 15vw, 40px);
-    white-space: no-wrap;
+    white-space: nowrap;
     justify-self: center;
     grid-row: 1;
     margin: 0;
@@ -565,14 +564,15 @@ left: 1%;
 /* ************************SECTION 3 *************************** */
 
 .section3-grid {
-    position: absolute;
-    top: 200%;
+    position: relative;
+    top: 0%;
     width: 100%;
-    height: 100%;
+    height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 7% aut auto 7%;
-    /* overflow: hidden; */
+    grid-template-rows: 7% auto auto 7%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .top-banner2 {
@@ -618,7 +618,157 @@ left: 1%;
 /* *************************************************** MY WORK ************************************************* */
 
 
+.my-work-grid {
+    position: relative;
+    top: 300%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 7% auto 7%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    }
+.my-work-top {
+    grid-row: 1;
+    display: flex;
+    width: 100%;
+    min-height: 7dvh;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    background: black;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
 
+.my-work-bottom {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+}
+.projects-grid {
+    grid-row: 2;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+}
+.projects-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.work-top {
+    color: white;
+    font-weight: 250;
+    font-style: light;
+    display: inline-block;
+    animation: scrollWorkTop2 600s linear infinite;
+}
+@keyframes scrollWorkTop2 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-2000%); /* Move half the width of the duplicated content */
+    }
+}
+.work-bottom {
+    color: white;
+    font-weight: 250;
+    font-style: light;
+    display: inline-block;
+    animation: scrollTopBottom 600s linear infinite;
+}
+@keyframes scrollTopBottom {
+    0% {
+        transform: translateX(-2000%);
+    }
+    100% {
+        transform: translateX(0%); /* Move half the width of the duplicated content */
+    }
+}
+
+.project1-container {
+    grid-column: 1;
+    grid-row: 1;
+}
+.project2-container {
+    grid-column: 2;
+    grid-row: 2;
+}
+.project3-container {
+    grid-column: 1;
+    grid-row: 3;
+}
+.project4-container {
+    grid-column: 2;
+    grid-row: 4;
+}
+.project5-container {
+    grid-column: 1;
+    grid-row: 5;
+}
+.project6-container {
+    grid-column: 2;
+    grid-row: 6;
+}
+.project-containers {
+    display: grid;
+    align-items: center;
+    padding: 2rem;
+    
+}
+iframe {
+    padding: 0;
+    border-radius: 25px;
+}
+
+.iframe-container, .iframe-containerB {
+    position: relative;
+    justify-self: center;
+    
+}
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.iframe-container::after, .iframe-container::before, 
+.iframe-containerB::after, .iframe-containerB::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    inset: 0;
+    transform: scaleX(1.02) scaleY(1.02);
+    z-index: -1;
+    border-radius: 25px;
+    top: -0.5%;
+    animation: borderSpin 5s linear infinite;
+}
+.iframe-container::after, .iframe-container::before {
+    background: conic-gradient(from var(--angle), transparent 40%, blue, red);
+    
+}
+.iframe-container::before, .iframe-containerB::before {
+    filter: blur(1.5rem);
+    opacity: 0.75;
+}
+.iframe-containerB::after, .iframe-containerB::before {
+    transform: rotateY(180deg) scaleX(1.02) scaleY(1.02);
+    background: conic-gradient(from var(--angle), transparent 40%, red, blue);
+}
+@keyframes borderSpin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
 
 
 /* ****************** 900px - 1024px ******************* */
