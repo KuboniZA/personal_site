@@ -42,6 +42,12 @@ index.html
 * ⚡ Performance optimizations
 * 📬 Improved contact integrations
 
+Video:
+
+https://github.com/user-attachments/assets/414c06b4-906e-45d3-a01c-64ece6ae6733
+
+
+
 KEY LEARNING: 
 
 Post-Deployment Optimization:
@@ -62,8 +68,7 @@ Lazy loading (loading="lazy")
 Image optimization pipelines
 Better asset management
 
-About Me
-Sipumzo Trueman Lucwaba
+About Me:
 
 I’m a composer, musical director, and software developer passionate about blending creativity with technology.
 * Music: Composition, orchestration, live direction
