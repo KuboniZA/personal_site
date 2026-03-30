@@ -63,23 +63,58 @@ display: inline-block
     margin: 0px;
     padding:0px;
 }
-/* .masked-landing {
-    height: 100dvh;
+
+.masked-landing {
+    height: 100%;
     width: 100%;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
     display: flex;
     left: 0px;
     top: 0px;
     justify-content: center;
-    background-size: cover;
     background: black;
-    mask-image: url(./assets/TransitionVector-ezgif.com-gif-to-webp-converter.webp);
-    mask-size: cover;
-    transform: rotate(180deg);
     z-index: 500;
     position: absolute;
-} */
+    overflow: visible;
+}
+.mask-inner {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: black;
+    z-index: 0;
+}
+@property --maskAngle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.mask-inner::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    background: conic-gradient(from var(--maskAngle), transparent 19%, blue, red, blue, red, transparent 80%);
+    inset: 0;
+    transform: scaleX(1.2) scaleY(1.2);
+    z-index: -1;
+    border-radius: 5px;
+    top: -0.5%;
+    animation: maskAnimation 3s linear infinite;
+}
+@keyframes maskAnimation {
+    from {
+        --maskAngle: 0deg;
+    }
+    to {
+        --maskAngle: 360deg;
+    }
+}
+
 .home-container {
     text-align: center;
     overflow: hidden;
