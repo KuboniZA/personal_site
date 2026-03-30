@@ -4,6 +4,7 @@ body {
     font-family: "Stack Sans Notch", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-display: swap;
 }
 .site-container {
     height: 100vh;
