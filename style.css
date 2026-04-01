@@ -128,7 +128,7 @@ display: inline-block
 .scroll-container {
     display: grid;
     position: fixed;
-    height: fit-content;
+    height: fit-content -webkit-fit-content; /* NB -webkit-fit-content is for Safari */
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
